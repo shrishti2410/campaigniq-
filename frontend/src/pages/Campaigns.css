@@ -1,0 +1,198 @@
+.camp-page {
+  padding: 36px 40px 64px;
+}
+
+.camp-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  gap: 16px;
+}
+
+.camp-h1 {
+  font-size: 24px;
+  font-weight: 700;
+  font-family: var(--heading);
+  color: var(--text-h);
+  margin: 0 0 4px;
+}
+
+.camp-sub {
+  font-size: 13px;
+  color: var(--text-sm);
+  margin: 0;
+}
+
+.camp-refresh-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 9px 20px;
+  font: 600 13px var(--sans);
+  color: #fff;
+  background: var(--terra);
+  border: none;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: opacity 0.15s, transform 0.1s;
+}
+
+.camp-refresh-btn:hover:not(:disabled) { opacity: 0.85; transform: translateY(-1px); }
+.camp-refresh-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+
+/* ── Card ── */
+.camp-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
+}
+
+/* ── States ── */
+.camp-loading,
+.camp-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 64px 24px;
+  font-size: 13px;
+  color: var(--text-sm);
+  font-family: var(--sans);
+}
+
+.camp-empty-icon { font-size: 32px; opacity: 0.3; }
+
+.camp-error {
+  padding: 24px;
+  background: var(--coral-bg);
+  border: 1px solid var(--coral-border);
+  border-radius: var(--radius);
+  margin: 16px;
+}
+
+.camp-error strong {
+  display: block;
+  color: var(--terra);
+  font-size: 13.5px;
+  margin-bottom: 5px;
+}
+
+.camp-error p {
+  font-size: 12px;
+  color: var(--text);
+  font-family: var(--mono);
+}
+
+/* ── Table ── */
+.camp-table-scroll { overflow-x: auto; }
+
+.camp-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--sans);
+  font-size: 13px;
+}
+
+.camp-table thead tr {
+  border-bottom: 1px solid var(--border);
+  background: var(--surface-2);
+}
+
+.camp-table th {
+  text-align: left;
+  padding: 10px 16px;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--label-text);
+  white-space: nowrap;
+}
+
+.camp-table td {
+  padding: 13px 16px;
+  color: var(--text);
+  border-bottom: 1px solid var(--border);
+  vertical-align: middle;
+}
+
+.camp-table tbody tr:last-child td { border-bottom: none; }
+
+.camp-table tbody tr:hover td {
+  background: var(--surface-2);
+  color: var(--text-h);
+}
+
+.camp-name {
+  font-weight: 500;
+  color: var(--text-h) !important;
+  max-width: 280px;
+}
+
+.camp-spend {
+  font-weight: 700;
+  color: var(--terra) !important;
+  font-family: var(--mono);
+}
+
+.camp-roas {
+  font-weight: 700;
+  color: var(--sage) !important;
+}
+
+/* ── Status pill ── */
+.camp-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 3px 9px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 600;
+  font-family: var(--sans);
+  letter-spacing: 0.02em;
+}
+
+.camp-status--enabled {
+  color: var(--sage);
+  background: var(--sage-bg);
+  border: 1px solid var(--sage-border);
+}
+
+.camp-status--paused {
+  color: var(--text-sm);
+  background: var(--surface-2);
+  border: 1px solid var(--border-med);
+}
+
+.camp-status-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+/* ── Spinner ── */
+.camp-spinner {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border: 2px solid rgba(255,255,255,0.35);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: camp-spin 0.65s linear infinite;
+}
+
+.camp-spinner--lg {
+  width: 28px;
+  height: 28px;
+  border: 3px solid var(--border);
+  border-top-color: var(--terra);
+}
+
+@keyframes camp-spin { to { transform: rotate(360deg); } }

@@ -1,0 +1,16 @@
+fastapi
+uvicorn
+python-multipart
+joblib
+pandas
+numpy
+scikit-learn
+xgboost
+python-dotenv
+httpx
+openai
+sqlalchemy
+python-jose[cryptography]
+passlib[bcrypt]
+bcrypt==4.0.1
+google-ads

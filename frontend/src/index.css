@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+/* ═══════════════════════════════════════════
+   DESIGN TOKENS (AESTHETIC FIXED)
+═══════════════════════════════════════════ */
+:root {
+  /* ── Surfaces (REMOVED BLUE TONES) ── */
+  --bg: #faf7f4;
+  --surface: #ffffff;
+  --surface-2: #f3ede8;
+  --surface-3: #f8f3ef;
+  /* FIXED from blue tint */
+
+  /* ── Sidebar ── */
+  --sidebar-bg: #2d1f14;
+  --sidebar-border: #3d2a1a;
+  --sidebar-text: #f5ede6;
+  --sidebar-text-sm: #c4a08a;
+  --sidebar-hover: #3d2a1a;
+
+  /* ── Topbar ── */
+  --topbar-bg: #2d1f14;
+  --topbar-border: #3d2a1a;
+
+  /* ── Borders ── */
+  --border: #ede8e3;
+  --border-med: #d8cfc8;
+  --border-strong: #c0b4aa;
+
+  /* ── Text ── */
+  --text-h: #1a0f0a;
+  --text: #4a3728;
+  --text-sm: #6b4f3a;
+  --label-text: #3d2512;
+
+  /* ── Gradients ── */
+  --g-terra: linear-gradient(135deg, #c9856a 0%, #e8a598 100%);
+  --g-rose: linear-gradient(135deg, #d4a5b5 0%, #e8a598 100%);
+  --g-sage: linear-gradient(135deg, #7dab8a 0%, #a8c5b0 100%);
+  --g-amber: linear-gradient(135deg, #e8c879 0%, #d4a84b 100%);
+  --g-hero: linear-gradient(135deg, #c9856a 0%, #d4a5b5 45%, #7dab8a 100%);
+
+  /* ── Core Palette ── */
+  --terra: #c9856a;
+  --terra-2: #a8644e;
+  --terra-bg: rgba(201, 133, 106, 0.1);
+  --terra-border: rgba(201, 133, 106, 0.3);
+
+  --rose: #d4a5b5;
+  --rose-bg: rgba(212, 165, 181, 0.12);
+  --rose-border: rgba(212, 165, 181, 0.35);
+
+  --sage: #7dab8a;
+  --sage-bg: rgba(125, 171, 138, 0.1);
+  --sage-border: rgba(125, 171, 138, 0.3);
+
+  --amber: #d4a84b;
+  --amber-light: #e8c879;
+  --amber-bg: rgba(232, 200, 121, 0.12);
+  --amber-border: rgba(212, 168, 75, 0.3);
+
+  /* ── Shadows ── */
+  --shadow: 0 8px 40px rgba(180, 140, 120, 0.14);
+  --shadow-sm: 0 2px 8px rgba(180, 140, 120, 0.1);
+  --shadow-card: 0 4px 20px rgba(180, 140, 120, 0.08);
+
+  /* ── Radius ── */
+  --radius: 14px;
+  --radius-sm: 9px;
+  --radius-lg: 20px;
+
+  /* ── Fonts ── */
+  --heading: 'Playfair Display', serif;
+  --sans: 'Plus Jakarta Sans', sans-serif;
+
+  font: 14px / 1.6 var(--sans);
+  color: var(--text);
+  background: var(--bg);
+}
+
+/* ═══════════════════════════════════════════
+   BASE RESET
+═══════════════════════════════════════════ */
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+  background: var(--bg);
+}
+
+#root {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* ═══════════════════════════════════════════
+   TYPOGRAPHY
+═══════════════════════════════════════════ */
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: var(--heading);
+  color: var(--text-h);
+}
+
+a {
+  color: var(--terra);
+}
+
+/* ═══════════════════════════════════════════
+   GLOBAL CARD FIX (IMPORTANT)
+═══════════════════════════════════════════ */
+.card,
+.panel,
+.box {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-card);
+}
+
+/* ═══════════════════════════════════════════
+   STAT CARD COLORS
+═══════════════════════════════════════════ */
+.stat-card:nth-child(1) {
+  background: var(--terra-bg);
+  border: 1px solid var(--terra-border);
+}
+
+.stat-card:nth-child(2) {
+  background: var(--sage-bg);
+  border: 1px solid var(--sage-border);
+}
+
+.stat-card:nth-child(3) {
+  background: var(--rose-bg);
+  border: 1px solid var(--rose-border);
+}
+
+.stat-card:nth-child(4) {
+  background: var(--amber-bg);
+  border: 1px solid var(--amber-border);
+}
+
+/* ═══════════════════════════════════════════
+   ANALYTICS / BIG PANELS
+═══════════════════════════════════════════ */
+.analytics-container {
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+/* ═══════════════════════════════════════════
+   SIDEBAR
+═══════════════════════════════════════════ */
+.sidebar {
+  background: var(--sidebar-bg);
+  color: var(--sidebar-text);
+  border-right: 1px solid var(--sidebar-border);
+}
+
+.sidebar-item:hover {
+  background: var(--sidebar-hover);
+}
+
+/* ═══════════════════════════════════════════
+   TOPBAR
+═══════════════════════════════════════════ */
+.topbar {
+  background: var(--topbar-bg);
+  border-bottom: 1px solid var(--topbar-border);
+  color: var(--sidebar-text);
+}
+
+/* ═══════════════════════════════════════════
+   BUTTONS
+═══════════════════════════════════════════ */
+.button-primary {
+  background: var(--terra);
+  color: white;
+  border-radius: 10px;
+}
+
+.button-primary:hover {
+  background: var(--terra-2);
+}
+
+/* ═══════════════════════════════════════════
+   GLASS EFFECT (OPTIONAL UPGRADE)
+═══════════════════════════════════════════ */
+.glass {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--border);
+}
+
+/* ═══════════════════════════════════════════
+   SCROLLBAR
+═══════════════════════════════════════════ */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(180, 140, 120, 0.3);
+}
