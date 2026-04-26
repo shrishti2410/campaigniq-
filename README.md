@@ -1,7 +1,5 @@
 ﻿# 🎯 CampaignIQ — AI-Powered Campaign Performance Platform
 
-> 🥈 **2nd Place — DataSprint, Innovation 2026** | MKSSS Cummins College of Engineering for Women
-
 ![Python](https://img.shields.io/badge/Python-3.11-blue) ![FastAPI](https://img.shields.io/badge/FastAPI-0.100+-green) ![React](https://img.shields.io/badge/React-18-61DAFB) ![sklearn](https://img.shields.io/badge/scikit--learn-1.6-orange)
 
 ---
@@ -138,23 +136,3 @@ OPENAI_API_KEY=your_key_here
 | POST | /analytics-upload | Dynamic analytics from uploaded CSV |
 | POST | /upload-csv | Batch predictions on uploaded CSV |
 | POST | /advisor | NLP AI campaign advisor |
-
----
-
-## 👥 Team
-
-- **Shrishti** 
-- **Sanika Devkule**
-- **Vishnupriya Lappasi**
-
----
-
-## 🙏 Mentors
-
-Ravi Kukreja · Amit Anand · Mehul Savhdeva · Pankaj Pawar · Utkarsh Bias · Parul Rupalriyas · Pankaj Jadhav · Disha Khanapurkar
-
----
-
-## 📄 License
-
-MIT License — feel free to use and build upon this project.
